@@ -51,7 +51,7 @@ function App() {
       </form>
       {books.map((book, index) => {
         return (
-          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages} onDeleteHandler={book.onDeleteHandler}/>
+          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages} onDeleteHandler={() =>onDeleteHandler}/>
         )
       })}
     </div>
