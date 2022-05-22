@@ -1,0 +1,34 @@
+img{
+    width: 150px;
+}
+
+.imagem-edit{
+    display: flex;
+    margin: 0 auto;
+    width: 150px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 5px;
+}
+
+#remove{
+    height: 2rem;
+    width: 2rem;
+    background-color: #fa00af;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+}
+
+#edit{
+    height: 2rem;
+    width: 2rem;
+    background-color: #0019fa;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    position: absolute;
+    margin-left: 7.4rem;
+    float: right;
+}
