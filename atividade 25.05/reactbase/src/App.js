@@ -32,11 +32,13 @@ function App() {
         linkImage: event.target.linkImage.value
       }
     ]);
-   
   }
 
-  const onDeleteHandler = () =>{
-    console.log("Exec");
+  const onDeleteHandler = (name, author, pages) =>{
+    let a = document.getElementById("name").value = name;
+    document.getElementById("author").value = author;
+    document.getElementById("pages").value = pages;
+    this.useState({name:"teste"})           
   }
  
   return (
@@ -51,7 +53,7 @@ function App() {
       </form>
       {books.map((book, index) => {
         return (
-          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages} onDeleteHandler={() =>onDeleteHandler}/>
+          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages} onDeleteHandler={() =>onDeleteHandler(book.name,book.author,book.pages)}/>
         )
       })}
     </div>

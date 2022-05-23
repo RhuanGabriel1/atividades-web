@@ -6,8 +6,8 @@ const Image = (props) =>(
         <div className='imagem-edit'>
                 <img src={props.link}
                  alt="Imagem livro"></img>
-                <button onClick={props.onDeleteHandler} id='remove'><span>X</span></button>
-                <button id='edit'><span>I</span></button>
+                <button id='remove'><span>X</span></button>
+                <button onClick={props.onDeleteHandler}  id='edit'><span>I</span></button>
         </div>
 )
  
