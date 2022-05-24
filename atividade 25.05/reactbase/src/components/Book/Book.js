@@ -3,7 +3,7 @@ import Image from '../Image/Image';
 import './Book.css';
 import App from '../../App';
 
-const Book = ({name, author, pages, linkImage, onDeleteHandler}) => {
+const Book = ({name, author, pages, linkImage, onEditHandler, onDeleteHandler}) => {
     return(
         <>
         <div className='Book'>
@@ -11,7 +11,7 @@ const Book = ({name, author, pages, linkImage, onDeleteHandler}) => {
             <p>{author}</p>
             <p>{pages}</p>
         </div>
-        <Image link={linkImage ? linkImage:"https://images-na.ssl-images-amazon.com/images/I/912xRMMra4L.jpg"} onDeleteHandler = {onDeleteHandler} />
+        <Image link={linkImage ? linkImage:"https://images-na.ssl-images-amazon.com/images/I/912xRMMra4L.jpg"} onEditHandler = {onEditHandler} onDeleteHandler ={onDeleteHandler}/>
         </>
     );
 }

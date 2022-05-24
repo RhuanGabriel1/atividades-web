@@ -34,13 +34,16 @@ function App() {
     ]);
   }
 
-  const onDeleteHandler = (name, author, pages) =>{
-    let a = document.getElementById("name").value = name;
+  const onEditHandler = (index, name, author, pages) =>{
+    document.getElementById("name").value = name;
     document.getElementById("author").value = author;
     document.getElementById("pages").value = pages;
-    this.useState({name:"teste"})           
   }
- 
+
+  const onDeleteHandler = (index) =>{
+    
+  }
+
   return (
     <div className="App">
       <h1>Meu primeiro exemplo React</h1>
@@ -53,12 +56,11 @@ function App() {
       </form>
       {books.map((book, index) => {
         return (
-          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages} onDeleteHandler={() =>onDeleteHandler(book.name,book.author,book.pages)}/>
+          <Book key={index}name={book.name} linkImage={book.linkImage} author={book.author} pages={book.pages}
+           onEditHandler={() =>onEditHandler(book.index,book.name,book.author,book.pages)} onDeleteHandler={() => onDeleteHandler(book.index)}/>
         )
       })}
     </div>
-
-      
 );
 }
 
